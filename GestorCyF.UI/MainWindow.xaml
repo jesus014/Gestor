@@ -1,0 +1,76 @@
+﻿<Window x:Class="GestorCyF.UI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GestorCyF.UI"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="550" Width="800" WindowStartupLocation="CenterScreen" >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            
+            <ColumnDefinition Width="65*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Menu Grid.Row="0" Grid.ColumnSpan="2" Margin="0,0,-0.4,453.4" VerticalContentAlignment="Center" Background="#303F9F" Foreground="White" Grid.RowSpan="2">
+            <MenuItem Header="Clutch y Frenos Huichapan" HorizontalContentAlignment="Center" HorizontalAlignment="Center" FontFamily="Bahnschrift" FontSize="14" x:Name="ClutchYFrenosPrincipal" Click="ClutchYFrenosPrincipal_Click" Width="202">
+            </MenuItem>
+            <MenuItem x:Name="Ventas" Header="Ventas" FontFamily="Bahnschrift">
+                <MenuItem Header="Ver Ventas" x:Name="VerVentas" Click="VerVentas_Click" Background="White"  BorderBrush="#303F9F" Foreground="#303F9F" />
+                <MenuItem Header="Nueva Venta" x:Name="NuevaVenta" Click="NuevaVenta_Click" Background="White"  BorderBrush="#303F9F" Foreground="#303F9F" />
+            </MenuItem>
+            <MenuItem x:Name="Compras" Header="Compras" FontFamily="Bahnschrift">
+                <MenuItem Header="Ver Compras" x:Name="VerCompras" Click="VerCompras_Click" Background="White"  BorderBrush="#303F9F" Foreground="#303F9F" />
+                <MenuItem Header="Nueva Compras" x:Name="NuevaCompra" Click="NuevaCompra_Click" Background="White"  BorderBrush="#303F9F" Foreground="#303F9F" />
+            </MenuItem>
+            <MenuItem x:Name="Productos" Header="Productos" FontFamily="Bahnschrift">
+                <MenuItem Header="Ver Productos" x:Name="VerProductos" Click="VerProductos_Click" Background="White"  BorderBrush="#303F9F" Foreground="#303F9F"/>
+                <MenuItem Header="Nuevo Productos" x:Name="NuevoProducto" Click="NuevoProducto_Click" Background="White"  BorderBrush="#303F9F" Foreground="#303F9F"/>
+            </MenuItem>
+            <MenuItem x:Name="Servicios" Header="Servicios" FontFamily="Bahnschrift">
+                <MenuItem Header="Ver Servicios" x:Name="VerServicios" Click="VerServicios_Click" Background="White"  BorderBrush="#303F9F" Foreground="#303F9F"/>
+                <MenuItem Header="Nuevo Servicio" x:Name="NuevoServicio" Click="NuevoServicio_Click" Background="White"  BorderBrush="#303F9F" Foreground="#303F9F"/>
+            </MenuItem>
+            <MenuItem x:Name="Clientes" Header="Clientes" FontFamily="Bahnschrift" >
+                <MenuItem Header="Ver Clientes" x:Name="VerClientes" Click="VerClientes_Click" Background="White" BorderBrush="#303F9F" Foreground="#303F9F" />
+                <MenuItem Header="Nuevo Cliente" x:Name="NuevoCliente" Click="NuevoCliente_Click" Background="White"  BorderBrush="#303F9F" Foreground="#303F9F"/>
+            </MenuItem>
+            <MenuItem x:Name="Proveedores" Header="Proveedores" FontFamily="Bahnschrift" Height="39" >
+                <MenuItem Header="Ver Proveedores" x:Name="VerProveedores" Click="VerProveedores_Click" Background="White"  BorderBrush="#303F9F" Foreground="#303F9F" />
+                <MenuItem Header="Nuevo Proveedor" x:Name="NuevoProveedor" Click="NuevoProveedor_Click" Background="White"  BorderBrush="#303F9F" Foreground="#303F9F" />
+            </MenuItem>
+            <MenuItem x:Name="Reportes" Header="Reportes" FontFamily="Bahnschrift" >
+
+            </MenuItem>
+            <MenuItem x:Name="Mensajes" Header="Mensajes" FontFamily="Bahnschrift">
+
+            </MenuItem>
+            <MenuItem Header="Archivo" Height="30" FontFamily="Bahnschrift">
+                <MenuItem Header="Cerrar Sesión" x:Name="CerrarSesion" Background="White"  BorderBrush="#303F9F" Foreground="#303F9F" />
+                <Separator/>
+                <MenuItem Header="Salir" Click="Salir_Click" x:Name="Salir" Background="White"  BorderBrush="#303F9F" Foreground="#303F9F" />
+            </MenuItem>
+
+
+        </Menu>
+        <Grid x:Name="Contenedor" Grid.ColumnSpan="2" Margin="0,30,-0.4,22" Grid.RowSpan="3"  >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="475*"/>
+                <ColumnDefinition Width="208*"/>
+                <ColumnDefinition Width="110*"/>
+            </Grid.ColumnDefinitions>
+        </Grid>
+        <StatusBar Grid.Row="2" Grid.ColumnSpan="2" Background="#303F9F" HorizontalContentAlignment="Right"  Foreground="White">
+            <TextBlock Text="Bienvenida Leticia"/>
+            <TextBlock>|</TextBlock>
+            <TextBlock x:Name="txtHora" ></TextBlock>
+            <TextBlock x:Name="txtFecha"></TextBlock>
+        </StatusBar>
+    </Grid>
+</Window>
